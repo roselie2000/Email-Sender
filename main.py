@@ -5,8 +5,8 @@ app = Flask(__name__)
 mail = Mail(app)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'simplepycoder20@gmail.com'
-app.config['MAIL_PASSWORD'] = 'Simple20pycoder'
+app.config['MAIL_USERNAME'] = 'your email id'
+app.config['MAIL_PASSWORD'] = 'your password'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
@@ -21,7 +21,7 @@ def mymail():
         subjet = request.form.get('subject')
         msg = request.form.get('msg')
         # attachment = request.form.get('attachment')
-        message = Message(subjet, sender='simplepycoder20@gmail.com', recipients=[recipient])
+        message = Message(subjet, sender='your email id', recipients=[recipient])
         message.body = msg
         mail.send(message)
         return '<p>Message sent</p>'
