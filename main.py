@@ -20,7 +20,6 @@ def mymail():
         recipient = request.form.get('recipients')
         subjet = request.form.get('subject')
         msg = request.form.get('msg')
-        # attachment = request.form.get('attachment')
         message = Message(subjet, sender='your email id', recipients=[recipient])
         message.body = msg
         mail.send(message)
