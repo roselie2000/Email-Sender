@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simlepycoder/pymail.com</title>
+    <style>
+    fieldset{
+        width: 400px;
+        height: 300px;
+        margin: auto;
+        margin-top: 100px;
+        border: 2px solid rgb(0,180,0);
+        float: center;
+        padding-top: 10px;
+        }
+    label{
+        display: block;
+        padding-top: 2px;
+        padding-botton: 2px;
+        }
+    </style>
+</head>
+<body>
+<center><h1><font color="red"> Welcome to Your Pymail account! </font></h1></center>
+<p><center><font style="color:blue; family:Arial;">You can sent any mail to your gmail account</font> </center></p>
+<fieldset>
+        <form action="http://localhost:5000/mail" method="post">
+            <table aria-colspan="5" cellpadding="3" cellspacing="3">
+                <tr><td>
+                    <label for="recipients" style="font-weight:bold; padding:2px;">To   :</label>
+                </td>
+                <td>
+                    <input type="email" id="recipients" name="recipients">
+                </td></tr>
+                <tr><td>
+                    <label for="subject" style="font-weight:bold; padding:2px;">subject   :</label>
+                </td>
+                <td>
+                    <input type="text" id="subject" name="subject">
+                </td></tr>
+            </table>
+            <textarea rows="10" cols="50" placeholder="Write your message here" id="msg" name="msg"></textarea>
+            <p>Attachment:      <input type="file" id="attachment" name="attachment" id="attachment"></p>
+            <input type="submit" value="Send">
+        </form>
+</fieldset>
+</body>
+</html>
